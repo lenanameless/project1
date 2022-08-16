@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS18</title>
+    <style>
+        #container {
+            border: 1px solid red;
+        }
+        div {
+            border: 1px solid blue;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        img {
+            height: 150px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+    </div>
+
+    <script>
+        let divs = prompt ("Введите кол-во блоков:");
+        let pics = prompt ("Введите кол-во картинок (1-11");
+        let s = "";
+        let maxpic = 1;
+
+        
+
+        for (i=1; i <= divs; i++) {
+            s += "<div>";
+                for (j=1; j<=pics; j++) {
+
+                    if (maxpic > 11) maxpic = 1
+
+                    s += `<img src="images/${maxpic++}.jpg" alt="">`
+                }
+            
+                maxpic =1;
+            s += `</div>`;
+        }
+
+        container.innerHTML = s;
+   
+    
+    </script>
+    
+</body>
+</html>
